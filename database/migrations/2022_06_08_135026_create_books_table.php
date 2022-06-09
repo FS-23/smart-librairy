@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
+    /*
+     *
      * Run the migrations.
      *
      * @return void
@@ -19,6 +20,7 @@ return new class extends Migration
             $table -> string('author');
             $table -> text('description');
             $table -> string('categorie');
+            $table -> string('image');
             $table->timestamps();
         });
     }

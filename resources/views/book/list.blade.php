@@ -3,7 +3,7 @@
 
  @section('content')
      <div class="mt-5 container">
-             <div class="d-block text-end">
+             <div class="d-block text-end pe-2">
                  <a href="/books/create" class="btn btn-outline-primary mt-5">New Book</a>
              </div>
              <div class="row mx-0">
@@ -15,7 +15,7 @@
                              </div>
                              <div class="bg-dark text-white p-3 ">
                                  <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis" class="">{{ $book -> description }}</p>
-                                 <a href="/blog/detail/{{ $book->id }}" class="btn btn-primary">More</a>
+                                 <a href="/books/detail/{{ $book->id }}" class="btn btn-primary">More</a>
                              </div>
                          </div>
                      </div>

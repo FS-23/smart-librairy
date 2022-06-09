@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
-   
+    
     public function index()
     {
         return view('book.list', ['books' => Book::all()]);
@@ -26,25 +26,30 @@ class BookController extends Controller
     }
 
     
-    public function show(Book $book)
+    public function show($id)
     {
-     
+        return  view('book.detail' , ["book" => Book::find($id)]);
     }
 
    
-    public function edit(Book $book)
+    public function edit($id)
     {
-        //
+        return view('book.update' , ["book" => Book::find($id)]);
     }
 
 
-    public function update(Request $request, Book $book)
+    public function update(Request $request, $id)
     {
+        $book = Book::find($id);
+        $book ->update($request->all());
+
+        return redirect('/books/list');
         //
     }
 
-    public function destroy(Book $book)
+    public function destroy($id)
     {
-        //
+        Book::destroy($id);
+        return redirect('/books/list');
     }
 }

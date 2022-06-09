@@ -8,26 +8,28 @@
         <h3>Add book</h3>
         <div style="height: 150px" class="bg-light mt-3 d-flex justify-content-center align-items-center">
             Ajouter l'image
+            <input type="file" name="image" required>
         </div>
         <div class="form-group mt-3">
             <label for="" class="form-label">Book title</label>
-            <input type="text" class="form-control" placeholder="title" name="title">
+            <input required type="text" class="form-control" placeholder="title" name="title">
         </div>
         <div class="form-group mt-3">
             <label for="" class="form-label">Book author</label>
-            <input type="text" class="form-control" placeholder="author"  name="author">
+            <input  required type="text" class="form-control" placeholder="author"  name="author">
         </div>
         <div class="form-group mt-3">
             <label for="" class="form-label">Book description</label>
-            <textarea type="text" class="form-control" placeholder="description"  name="description"></textarea>
+            <textarea  required type="text" class="form-control" rows="10" placeholder="description"  name="description"></textarea>
         </div>
         <div class="form-group mt-3">
             <label for="" class="form-label">Book category</label>
-            <select name="categorie" id="" class="form-select">
+            <select  required  name="categorie" id="" class="form-select">
                 <option value="">Choose one...</option>
                 <option value="thriller">Thriller</option>
                 <option value="romance">Romance</option>
-                <option value="dramatic">Draman</option>
+                <option value="dramatic">Drama</option>
+                <option value="dramatic">Personal developpment</option>
             </select>
         </div>
 
