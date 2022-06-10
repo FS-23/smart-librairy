@@ -2,7 +2,7 @@
  @extends('layout.layout')
 
  @section('content')
-     <div class="mt-3 container">
+     <div class="mt-5 container">
              <div class="d-block text-end pe-2">
                  <a href="/books/create" class="btn btn-outline-primary mt-5">New Book</a>
              </div>

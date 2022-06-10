@@ -50,9 +50,8 @@ class BookController extends Controller
             $file = $request -> file('bookImage');
             $fileStoreResult = $file->store('/public/bookImages');
             $fileName = str_replace('public', 'storage' , $fileStoreResult);
-            $book -> image = $fileName;
+            $data['image'] = $fileName;
         }
-
         $book ->update($request->all());
         return redirect('/books/list');
         //

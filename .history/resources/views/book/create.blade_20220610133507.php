@@ -29,7 +29,7 @@
                 <option value="thriller">Thriller</option>
                 <option value="romance">Romance</option>
                 <option value="dramatic">Drama</option>
-                <option value="personal developpement">Personal developpment</option>
+                <option value="dramatic">Personal developpment</option>
             </select>
         </div>
 

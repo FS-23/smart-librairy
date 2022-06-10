@@ -47,12 +47,12 @@ class BookController extends Controller
     {
         $book = Book::find($id);
         if($request->hasFile("bookImage")){
+            return 12;
             $file = $request -> file('bookImage');
             $fileStoreResult = $file->store('/public/bookImages');
             $fileName = str_replace('public', 'storage' , $fileStoreResult);
-            $book -> image = $fileName;
+            $data['image'] = $fileName;
         }
-
         $book ->update($request->all());
         return redirect('/books/list');
         //

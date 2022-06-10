@@ -2,7 +2,7 @@
 
 @section('content')
 
-   <div class="col-11 col-sm-6 shadow-sm mt-5 p-3 m-auto">
+   <div class="col-6 shadow-sm mt-5 p-3 m-auto">
     <form action="/books/update/{{ $book->id }}" method="post" enctype="multipart/form-data">
         @csrf
         <h3>Add book</h3>
@@ -59,7 +59,8 @@
                  // console.log('result:', reader.result);
                  imagePreview.src = reader.result;
                  imagePreview.style.display = '';
-                 fileInput.name = "bookImage";
+                 document.querySelector('#choose-txt').style.display = 'none'
+                 fileInput.name = "bookImage"
               }
               reader.readAsDataURL(fileInput.files[0])
 

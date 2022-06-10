@@ -2,7 +2,7 @@
  @extends('layout.layout')
 
  @section('content')
-     <div class="mt-3 container">
+     <div class="mt-5 container">
              <div class="d-block text-end pe-2">
                  <a href="/books/create" class="btn btn-outline-primary mt-5">New Book</a>
              </div>
@@ -12,7 +12,7 @@
                          <div class="h-100">
                              <div class="bg-light p-3 d-flex justify-content-center align-items-center" style="height: 150px">
                                  <h3>{{ $book -> title }}</h3>
-                                 <img src="{{ url($book->image) }}" width="70" height="100" alt="">
+                                 <img src="{{ url($book->image) }}" alt="">
                              </div>
                              <div class="bg-dark text-white p-3 ">
                                  <p style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis" class="">{{ $book -> description }}</p>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <header style="position: fixed; top:0; width: 100%">
+    <header>
         <nav class="navbar navbar-expand-lg  bg-dark  text-white">
              <div class="container">
                   <div class="navbar-brand text-white">SmartLibrairy</div>
@@ -31,7 +31,7 @@
            
         </nav>
     </header>
-    <section style="margin-top: 70px">
+    <section>
         @yield('content')
     </section>     
 

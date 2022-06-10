@@ -6,8 +6,8 @@
     <form action="/books/store" method="post" enctype="multipart/form-data">
         @csrf
         <h3>Add book</h3>
-        <div id="choose-image-container" style="height: 150px ; cursor:pointer" class="cursor-pointer bg-light mt-3 d-flex justify-content-center align-items-center">
-            <span id="choose-txt">Ajouter l'image</span> <img  style="width: 100px ;display: none; height: 95%" id="imagePreview" src="" alt="image">
+        <div id="choose-image-container" style="height: 150px" class="bg-light mt-3 d-flex justify-content-center align-items-center">
+            Ajouter l'image <img style="width: 100% ; height: 100" id="imagePreview" src="" alt="image">
             <input type="file" accept="image/*" style="display: none" id="bookFile" name="bookImage" required>
         </div>
         <div class="form-group mt-3">
@@ -29,7 +29,7 @@
                 <option value="thriller">Thriller</option>
                 <option value="romance">Romance</option>
                 <option value="dramatic">Drama</option>
-                <option value="personal developpement">Personal developpment</option>
+                <option value="dramatic">Personal developpment</option>
             </select>
         </div>
 
@@ -59,8 +59,6 @@
                     // console.log('result:', reader.result);
 
                     imagePreview.src = reader.result;
-                    imagePreview.style.display = '';
-                    document.querySelector('#choose-txt').style.display = 'none'
                  }
                  reader.readAsDataURL(fileInput.files[0])
 

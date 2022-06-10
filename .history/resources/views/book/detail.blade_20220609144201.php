@@ -3,7 +3,7 @@
 @section('content')
     <div class="col-6 mt-5 shadow-sm p-3 m-auto">
          <div>
-             <img src="{{ asset($book->image) }}" alt="Book's image" width="70" height="100" style="background: dimgrey"> 
+             <img src="" alt="Book's image" width="70" height="100" style="background: dimgrey"> 
              <div>
                  <strong>{{ $book->title }}</strong>
              </div>

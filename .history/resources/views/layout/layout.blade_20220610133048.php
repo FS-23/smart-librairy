@@ -31,7 +31,7 @@
            
         </nav>
     </header>
-    <section style="margin-top: 70px">
+    <section>
         @yield('content')
     </section>     
 

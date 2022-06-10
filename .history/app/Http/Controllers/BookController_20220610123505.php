@@ -46,14 +46,8 @@ class BookController extends Controller
     public function update(Request $request, $id)
     {
         $book = Book::find($id);
-        if($request->hasFile("bookImage")){
-            $file = $request -> file('bookImage');
-            $fileStoreResult = $file->store('/public/bookImages');
-            $fileName = str_replace('public', 'storage' , $fileStoreResult);
-            $book -> image = $fileName;
-        }
-
         $book ->update($request->all());
+
         return redirect('/books/list');
         //
     }

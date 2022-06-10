@@ -10,7 +10,6 @@ class BookController extends Controller
     
     public function index()
     {
-
         return view('book.list', ['books' => Book::all()]);
     }
 
@@ -25,7 +24,9 @@ class BookController extends Controller
         $file = $request -> file('bookImage');
         $fileStoreResult = $file->store('/public/bookImages');
         $fileName = str_replace('public', 'storage' , $fileStoreResult);
-        $data['image'] = $fileName;
+        $date['image'] = $fileName;
+
+        return $data;
         $createdBook = Book::create($data);
         return redirect('/books/list');
     }
@@ -46,14 +47,8 @@ class BookController extends Controller
     public function update(Request $request, $id)
     {
         $book = Book::find($id);
-        if($request->hasFile("bookImage")){
-            $file = $request -> file('bookImage');
-            $fileStoreResult = $file->store('/public/bookImages');
-            $fileName = str_replace('public', 'storage' , $fileStoreResult);
-            $book -> image = $fileName;
-        }
-
         $book ->update($request->all());
+
         return redirect('/books/list');
         //
     }

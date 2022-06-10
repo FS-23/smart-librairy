@@ -33,10 +33,8 @@ Route::post('/file/store' , function(Request $request){
 
     $file = $request -> file('myFile');
 
-    // Storage::put('myfile.jpg', $file);
-     $storeResult = $file->store('public/bookImages'); // file est le name de votre input dans file.blade.php
+    Storage::put('myfile.jpg', $file);
+    // $storeResult = $file->store('public/bookImages'); // file est le name de votre input dans file.blade.php
     // return $storeResult;
-
-    $fileName = str_replace('public' , 'storage' , $storeResult);
-     return  $fileName;
+    return $request->all();
 });
