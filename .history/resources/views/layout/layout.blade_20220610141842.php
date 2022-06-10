@@ -37,8 +37,8 @@
                  <div class="container">
                       <div class="navbar-brand text-white">SmartLibrairy</div>
     
-                      <button class="navbar-toggler" data-bs-toggle="collapse" href="#menu-container">
-                         <span class="navbar-toggler-icon"></span>
+                      <button class="navbar-toggler " data-bs-toggle="collapse" href="#menu-container">
+                         <span class="navbar-toggler-icon bg-white"></span>
                       </button>
                       <div class="collapse navbar-collapse" id="menu-container">
                         <ul class="navbar-nav">

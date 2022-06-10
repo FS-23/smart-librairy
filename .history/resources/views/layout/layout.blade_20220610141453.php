@@ -18,9 +18,7 @@
         }
 
         .content {
-            margin-top: 70px;
-            padding-bottom:  160px
-            
+            margin-top: 70px
         }
         .footer {
             position: absolute;
@@ -65,7 +63,7 @@
                 @endforeach
             @endif
         </section>
-        <footer class="footer bg-dark p-5 text-center text-white">
+        <footer class="footer bg-dark p-3 text-center text-white">
              ©copyright FS-23 2022
         </footer>
      </div>

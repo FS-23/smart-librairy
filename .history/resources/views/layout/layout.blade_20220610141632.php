@@ -18,8 +18,7 @@
         }
 
         .content {
-            margin-top: 70px;
-            padding-bottom:  160px
+            margin: 70px 0 100px;
             
         }
         .footer {

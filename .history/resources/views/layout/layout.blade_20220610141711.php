@@ -19,7 +19,7 @@
 
         .content {
             margin-top: 70px;
-            padding-bottom:  160px
+            padding-bottom:  100px
             
         }
         .footer {

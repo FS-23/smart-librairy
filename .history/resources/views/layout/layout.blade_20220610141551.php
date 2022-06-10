@@ -18,9 +18,7 @@
         }
 
         .content {
-            margin-top: 70px;
-            padding-bottom:  160px
-            
+            margin-top: 70px 0
         }
         .footer {
             position: absolute;
