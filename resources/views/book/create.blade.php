@@ -1,9 +1,9 @@
 @extends('layout.layout')
 
 @section('content')
-
+   
    <div class="col-11 col-sm-6 shadow-sm mt-5 p-3 m-auto">
-    <form action="/books/store" method="post" enctype="multipart/form-data">
+    <form action="/books/store?name=John" method="post" enctype="multipart/form-data">
         @csrf
         <h3>Add book</h3>
         <div id="choose-image-container" style="height: 150px ; cursor:pointer" class="cursor-pointer bg-light mt-3 d-flex justify-content-center align-items-center">
@@ -12,7 +12,7 @@
         </div>
         <div class="form-group mt-3">
             <label for="" class="form-label">Book title</label>
-            <input required type="text" class="form-control" placeholder="title" name="title">
+            <input  type="text" class="form-control" placeholder="title" name="title">
         </div>
         <div class="form-group mt-3">
             <label for="" class="form-label">Book author</label>

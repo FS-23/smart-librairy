@@ -27,8 +27,14 @@
             width: 100%;
             bottom:0
         }
+
+
+      
+       
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
      <div class="main">
@@ -36,7 +42,6 @@
             <nav class="navbar navbar-expand-lg  bg-dark  text-white">
                  <div class="container">
                       <div class="navbar-brand text-white">SmartLibrairy</div>
-    
                       <button class="navbar-toggler" data-bs-toggle="collapse" href="#menu-container">
                          <span class="navbar-toggler-icon"></span>
                       </button>
@@ -55,6 +60,16 @@
             </nav>
         </header>
         <section class="content" >
+            <div class="error-container">
+                @if($errors -> any())
+                    <div >
+                        <h6>Vous avez des erreurs</h6>
+                        @foreach($errors->all() as $error)
+                        <p  class="text-danger">{{ $error }}</p>
+                        @endforeach
+                    </div>
+                @endif
+            </div>
             @yield('content')
         </section>     
     
